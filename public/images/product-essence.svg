@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="720" viewBox="0 0 640 720" role="img" aria-label="Placeholder — Mikei Red Reishi Essence, 30 capsules">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a4f2a" />
+      <stop offset="100%" stop-color="#6b2a1a" />
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f3a25" />
+      <stop offset="100%" stop-color="#1f2718" />
+    </linearGradient>
+  </defs>
+  <rect x="230" y="60" width="180" height="90" rx="8" fill="url(#cap)" />
+  <rect x="200" y="150" width="240" height="440" rx="22" fill="url(#glass)" />
+  <rect x="224" y="230" width="192" height="260" rx="4" fill="#f7f1e6" opacity="0.92" />
+  <text x="320" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="4" fill="#241e18">MIKEI</text>
+  <text x="320" y="368" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="15" letter-spacing="3" fill="#6b2a1a">RED REISHI</text>
+  <text x="320" y="392" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="15" letter-spacing="3" fill="#6b2a1a">ESSENCE</text>
+  <text x="320" y="450" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#8b7f6e" opacity="0.7">御芝</text>
+  <text x="320" y="480" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="2" fill="#8b7f6e">30 CAPSULES</text>
+</svg>

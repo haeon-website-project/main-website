@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Brand palette — source of truth for every semantic token below */
+  --color-clay: #b7784f;
+  --color-clay-dark: #8a4f2a;
+  --color-moss: #4a5a3a;
+  --color-moss-deep: #2f3a25;
+  --color-paper: #f7f1e6;
+  --color-sand: #efe6d6;
+  --color-ink: #241e18;
+  --color-stone: #8b7f6e;
+  --color-line: #c9bda6;
+  --color-ember: #6b2a1a;
+  --color-abyss: #1f2718;
+
+  /* Semantic roles (Primary = Clay, Secondary = Moss, Accent = Dark Brown) */
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+  --color-card: var(--color-paper);
+  --color-card-foreground: var(--color-ink);
+  --color-popover: var(--color-paper);
+  --color-popover-foreground: var(--color-ink);
+  --color-primary: var(--color-clay);
+  --color-primary-foreground: var(--color-paper);
+  --color-secondary: var(--color-moss);
+  --color-secondary-foreground: var(--color-paper);
+  --color-muted: var(--color-sand);
+  --color-muted-foreground: var(--color-stone);
+  --color-accent: var(--color-ember);
+  --color-accent-foreground: var(--color-paper);
+  --color-destructive: #a3312a;
+  --color-border: var(--color-line);
+  --color-input: var(--color-line);
+  --color-ring: var(--color-clay);
+
+  /* Typography */
+  --font-display: var(--font-cormorant), "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-jp: var(--font-shippori), serif;
+
+  /* Radius — luxury editorial defaults to sharp, near-flat corners */
+  --radius: 0.125rem;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 2);
+  --radius-xl: calc(var(--radius) * 4);
+  --radius-2xl: calc(var(--radius) * 8);
+
+  /* Soft luxury shadows */
+  --shadow-soft: 0 30px 80px -30px rgb(107 42 26 / 0.35);
+  --shadow-lift: 0 20px 40px -20px rgb(36 30 24 / 0.25);
+  --shadow-card: 0 1px 2px rgb(36 30 24 / 0.06), 0 8px 24px -12px rgb(36 30 24 / 0.12);
+
+  /* Motion */
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark {
+  --color-background: var(--color-moss-deep);
+  --color-foreground: var(--color-sand);
+  --color-card: #263020;
+  --color-card-foreground: var(--color-sand);
+  --color-popover: #263020;
+  --color-popover-foreground: var(--color-sand);
+  --color-primary: var(--color-clay);
+  --color-primary-foreground: var(--color-ink);
+  --color-secondary: var(--color-sand);
+  --color-secondary-foreground: var(--color-moss-deep);
+  --color-muted: #1f2718;
+  --color-muted-foreground: var(--color-line);
+  --color-accent: var(--color-clay);
+  --color-accent-foreground: var(--color-ink);
+  --color-border: rgb(201 189 166 / 0.15);
+  --color-input: rgb(201 189 166 / 0.15);
+  --color-ring: var(--color-clay);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .bg-hero-aurora {
+    background:
+      radial-gradient(1200px 500px at 80% 20%, rgb(183 120 79 / 0.18), transparent 60%),
+      radial-gradient(900px 500px at 10% 90%, rgb(74 90 58 / 0.16), transparent 60%),
+      linear-gradient(180deg, #f2ead9, #efe4cf);
+  }
+}

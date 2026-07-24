@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="Placeholder — the Mayuzumi family wood-log cultivation, Gunma, Japan">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f3a25" />
+      <stop offset="55%" stop-color="#3a2e1e" />
+      <stop offset="100%" stop-color="#241a12" />
+    </linearGradient>
+    <radialGradient id="glow" cx="25%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#4a5a3a" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#4a5a3a" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)" />
+  <rect width="900" height="1200" fill="url(#glow)" />
+  <text x="500" y="1130" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="5" fill="#efe4cf" opacity="0.5">GUNMA, JAPAN · SINCE 1976</text>
+</svg>
