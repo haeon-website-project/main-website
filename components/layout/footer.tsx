@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Container } from "@/components/shared/container";
@@ -12,8 +13,16 @@ export function Footer() {
       <Container>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <Link href="/" className="flex flex-col items-start gap-1">
-              <span className="font-display text-sand text-2xl tracking-[0.1em]">{SITE.shortName}</span>
+            <Link href="/" className="inline-flex w-fit flex-col items-start gap-2.5">
+              <span className="bg-paper inline-flex px-4 py-2.5">
+                <Image
+                  src="/images/haeon-logo.png"
+                  alt="Haeon"
+                  width={171}
+                  height={50}
+                  className="h-7 w-auto"
+                />
+              </span>
               <JapaneseAccent size="small" className="text-stone">
                 {SITE.japaneseTagline}
               </JapaneseAccent>

@@ -1,18 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { Container } from "@/components/shared/container";
 import { CtaButton } from "@/components/shared/cta-button";
 import { DesktopNav } from "@/components/layout/desktop-nav";
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { HEADER_HIDE_THRESHOLD_PX } from "@/constants/site";
 import { PRIMARY_NAV } from "@/data/navigation";
 import { useScrollDirection } from "@/hooks/use-scroll-direction";
 import { cn } from "@/lib/utils";
-import { SITE } from "@/constants/site";
 import type { CtaLink } from "@/types";
 
 const HEADER_CTA: CtaLink = { label: "Shop Essence", href: "#product" };
@@ -32,21 +31,22 @@ export function Header() {
       )}
     >
       <Container className="flex items-center justify-between gap-6 py-4">
-        <Link href="/" className="flex flex-col items-start gap-0.5">
-          <span className="font-display text-accent text-[1.75rem] leading-none tracking-[0.32em] uppercase md:text-[2.125rem]">
-            {SITE.shortName}
-          </span>
-          <span className="text-muted-foreground font-sans text-[9px] tracking-[0.5em] uppercase">
-            {SITE.japaneseTagline}
-          </span>
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/images/haeon-logo.png"
+            alt="Haeon"
+            width={171}
+            height={50}
+            priority
+            className="h-8 w-auto md:h-9"
+          />
         </Link>
 
         <DesktopNav items={PRIMARY_NAV} />
 
         <div className="flex items-center gap-5">
-          <LanguageSwitcher languages={SITE.languages} className="hidden lg:flex" />
           <CtaButton cta={HEADER_CTA} size="sm" className="hidden md:inline-flex" />
-          <MobileNav items={PRIMARY_NAV} languages={SITE.languages} cta={HEADER_CTA} />
+          <MobileNav items={PRIMARY_NAV} cta={HEADER_CTA} />
         </div>
       </Container>
     </motion.header>

@@ -5,17 +5,15 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { CtaButton } from "@/components/shared/cta-button";
-import type { CtaLink, LanguageOption, NavItem } from "@/types";
+import type { CtaLink, NavItem } from "@/types";
 
 interface MobileNavProps {
   items: NavItem[];
-  languages: LanguageOption[];
   cta: CtaLink;
 }
 
-export function MobileNav({ items, languages, cta }: MobileNavProps) {
+export function MobileNav({ items, cta }: MobileNavProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -92,8 +90,7 @@ export function MobileNav({ items, languages, cta }: MobileNavProps) {
                 </ul>
               </nav>
 
-              <div className="border-border mt-auto flex flex-col gap-6 border-t pt-6">
-                <LanguageSwitcher languages={languages} />
+              <div className="border-border mt-auto border-t pt-6">
                 <CtaButton cta={cta} className="w-full justify-center" />
               </div>
             </motion.div>

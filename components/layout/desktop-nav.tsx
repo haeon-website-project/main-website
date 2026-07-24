@@ -16,21 +16,21 @@ export function DesktopNav({ items, className }: DesktopNavProps) {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
 
   return (
-    <nav className={cn("hidden lg:block", className)} aria-label="Primary">
-      <ul className="flex items-center gap-9">
+    <nav className={cn("hidden shrink-0 lg:block", className)} aria-label="Primary">
+      <ul className="flex items-center gap-6 xl:gap-9">
         {items.map((item) => {
           const hasChildren = Boolean(item.children?.length);
 
           return (
             <li
               key={item.label}
-              className="relative"
+              className="relative shrink-0"
               onMouseEnter={() => hasChildren && setOpenLabel(item.label)}
               onMouseLeave={() => hasChildren && setOpenLabel(null)}
             >
               <Link
                 href={item.href}
-                className="text-secondary hover:text-accent font-sans text-[11px] tracking-[0.24em] uppercase transition-colors"
+                className="text-secondary hover:text-accent block font-sans text-[11px] tracking-[0.24em] whitespace-nowrap uppercase transition-colors"
                 aria-haspopup={hasChildren ? "true" : undefined}
                 aria-expanded={hasChildren ? openLabel === item.label : undefined}
               >
