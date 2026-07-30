@@ -27,8 +27,8 @@ export function MediaReveal({
   return (
     <motion.div
       className={cn("relative overflow-hidden", aspectClassName, className)}
-      initial={{ clipPath: "inset(6% 6% 6% 6% round 2px)", opacity: 0, scale: 1.04 }}
-      whileInView={{ clipPath: "inset(0% 0% 0% 0% round 2px)", opacity: 1, scale: 1 }}
+      initial={priority ? false : { clipPath: "inset(6% 6% 6% 6% round 2px)", opacity: 0, scale: 1.04 }}
+      whileInView={priority ? undefined : { clipPath: "inset(0% 0% 0% 0% round 2px)", opacity: 1, scale: 1 }}
       viewport={{ once: true, margin: "-10%" }}
       transition={{ duration: MOTION.durationLong, ease: MOTION.ease }}
     >
@@ -37,7 +37,8 @@ export function MediaReveal({
         alt={image.alt}
         fill
         sizes={sizes}
-        priority={priority}
+        loading={priority ? "eager" : undefined}
+        fetchPriority={priority ? "high" : undefined}
         placeholder={image.blurDataURL ? "blur" : undefined}
         blurDataURL={image.blurDataURL}
         className="object-cover"

@@ -54,7 +54,7 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.2} className="relative">
+        <Reveal immediate className="relative">
           <MediaReveal image={HERO.visual} priority className="shadow-soft" />
 
           <div

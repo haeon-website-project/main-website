@@ -37,7 +37,7 @@ export function Header() {
             alt="Mikei"
             width={287}
             height={300}
-            priority
+            loading="eager"
             className="h-16 w-auto md:h-20"
           />
         </Link>

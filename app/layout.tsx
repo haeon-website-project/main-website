@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 
-import { Toaster } from "@/components/ui/sonner";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 import { JsonLd } from "@/components/shared/json-ld";
 import { SITE } from "@/constants/site";
 import { fontVariables } from "@/lib/fonts";
@@ -49,10 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             foundingDate: SITE.since,
           }}
         />
-        <ThemeProvider>
-          {children}
-          <Toaster position="bottom-right" richColors />
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

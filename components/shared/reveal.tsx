@@ -10,6 +10,7 @@ interface RevealProps {
   delay?: number;
   y?: number;
   once?: boolean;
+  immediate?: boolean;
 }
 
 const variants: Variants = {
@@ -17,11 +18,11 @@ const variants: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export function Reveal({ children, className, delay = 0, y = 24, once = true }: RevealProps) {
+export function Reveal({ children, className, delay = 0, y = 24, once = true, immediate = false }: RevealProps) {
   return (
     <motion.div
       className={className}
-      initial="hidden"
+      initial={immediate ? false : "hidden"}
       whileInView="visible"
       viewport={{ once, margin: "-10% 0px -10% 0px" }}
       variants={{ hidden: { opacity: 0, y }, visible: variants.visible }}

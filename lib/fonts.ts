@@ -18,7 +18,7 @@ export const inter = Inter({
 export const shippori = Shippori_Mincho({
   variable: "--font-shippori",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400"],
   display: "swap",
 });
 
