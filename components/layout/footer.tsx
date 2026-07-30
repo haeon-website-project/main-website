@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { Container } from "@/components/shared/container";
 import { JapaneseAccent } from "@/components/shared/japanese-accent";
-import { NewsletterForm } from "@/components/shared/newsletter-form";
 import { SITE } from "@/constants/site";
 import { FOOTER } from "@/data/footer";
 
@@ -14,13 +13,13 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Link href="/" className="inline-flex w-fit flex-col items-start gap-2.5">
-              <span className="bg-paper inline-flex px-4 py-2.5">
+              <span className="bg-paper inline-flex px-5 py-3.5">
                 <Image
                   src="/images/mikei-logo.png"
                   alt="Mikei"
                   width={287}
                   height={300}
-                  className="h-7 w-auto"
+                  className="h-16 w-auto"
                 />
               </span>
               <JapaneseAccent size="small" className="text-stone">
@@ -53,15 +52,12 @@ export function Footer() {
           ))}
 
           <div>
-            <h5 className="text-sand mb-5 font-sans text-[11px] tracking-[0.28em] uppercase">
-              Stay Informed
-            </h5>
+            <h5 className="text-sand mb-5 font-sans text-[11px] tracking-[0.28em] uppercase">Contact</h5>
             <ul className="text-line mb-6 flex flex-col gap-2.5 font-sans text-[13px]">
               {FOOTER.contact.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
-            <NewsletterForm />
 
             {FOOTER.social.length > 0 && (
               <ul className="mt-6 flex gap-4">

@@ -30,7 +30,7 @@ export function Header() {
           : "border-transparent bg-transparent",
       )}
     >
-      <Container className="flex items-center justify-between gap-6 py-4">
+      <Container className="flex items-center justify-between gap-6 py-2.5">
         <Link href="/" className="shrink-0">
           <Image
             src="/images/mikei-logo.png"
@@ -38,7 +38,7 @@ export function Header() {
             width={287}
             height={300}
             priority
-            className="h-8 w-auto md:h-9"
+            className="h-16 w-auto md:h-20"
           />
         </Link>
 

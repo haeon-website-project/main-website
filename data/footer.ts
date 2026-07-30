@@ -9,7 +9,6 @@ export const FOOTER: FooterContent = {
       links: [
         { label: "Red Reishi Essence", href: "#product" },
         { label: "Stockists", href: "#locator" },
-        { label: "Trade Enquiries", href: "/trade" },
       ],
     },
     {

@@ -16,6 +16,7 @@ export function CtaButton({ cta, variant, size, className }: CtaButtonProps) {
         variant={variant}
         size={size}
         className={className}
+        nativeButton={false}
         render={<a href={cta.href} target="_blank" rel="noopener noreferrer" />}
       >
         {cta.label}
@@ -24,7 +25,13 @@ export function CtaButton({ cta, variant, size, className }: CtaButtonProps) {
   }
 
   return (
-    <Button variant={variant} size={size} className={className} render={<Link href={cta.href} />}>
+    <Button
+      variant={variant}
+      size={size}
+      className={className}
+      nativeButton={false}
+      render={<Link href={cta.href} />}
+    >
       {cta.label}
     </Button>
   );
