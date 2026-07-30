@@ -1,4 +1,3 @@
-import { ContactCta } from "@/components/sections/contact-cta";
 import { Locator } from "@/components/sections/locator";
 import { Press } from "@/components/sections/press";
 import { Product } from "@/components/sections/product";
@@ -23,7 +22,6 @@ export default function HomePage() {
         <Ritual />
         <Press />
         <Locator />
-        <ContactCta />
       </main>
       <Footer />
     </>

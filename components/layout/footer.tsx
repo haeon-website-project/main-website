@@ -16,10 +16,10 @@ export function Footer() {
             <Link href="/" className="inline-flex w-fit flex-col items-start gap-2.5">
               <span className="bg-paper inline-flex px-4 py-2.5">
                 <Image
-                  src="/images/haeon-logo.png"
-                  alt="Haeon"
-                  width={171}
-                  height={50}
+                  src="/images/mikei-logo.png"
+                  alt="Mikei"
+                  width={287}
+                  height={300}
                   className="h-7 w-auto"
                 />
               </span>

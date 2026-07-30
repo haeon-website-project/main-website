@@ -8,12 +8,12 @@ export function RetailerStrip() {
     <section className="border-border bg-muted border-y py-14" aria-label="Where to find Mikei">
       <Container>
         <Reveal>
-          <p className="text-muted-foreground mb-6 text-center font-sans text-[11px] font-medium tracking-[0.32em] uppercase">
+          <p className="text-muted-foreground mb-6 text-center font-sans text-[11px] font-medium tracking-[0.32em]">
             {RETAILERS.lead}
           </p>
         </Reveal>
 
-        <StaggerGroup className="mx-auto mb-10 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
+        <StaggerGroup className="mx-auto mb-10 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
           {RETAILERS.featured.map((retailer) => (
             <StaggerItem key={retailer.name}>
               <RetailerCard {...retailer} />

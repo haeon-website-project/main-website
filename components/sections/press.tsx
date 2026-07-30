@@ -38,18 +38,10 @@ export function Press() {
             <span className="text-muted-foreground font-sans text-[11px] tracking-[0.24em] uppercase">
               {PRESS.feature.byline}
             </span>
-            <a
-              href={PRESS.feature.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-primary text-accent hover:border-secondary hover:text-secondary self-start border-b font-sans text-[11px] tracking-[0.24em] uppercase transition-colors"
-            >
-              Read the full article →
-            </a>
           </div>
         </Reveal>
 
-        <StaggerGroup className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <StaggerGroup className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {PRESS.cards.map((card) => (
             <StaggerItem key={card.heading}>
               <PressCard {...card} />

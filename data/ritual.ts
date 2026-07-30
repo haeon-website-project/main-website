@@ -15,7 +15,7 @@ export const RITUAL: RitualContent = {
       numeral: "二",
       title: "Pair with vitamin C.",
       description:
-        "Citrus, kiwi or a small squeeze of yuzu — vitamin C enhances the absorption of reishi's bioactive compounds.",
+        "Vitamin C enhances the absorption of reishi's bioactive compounds.",
     },
     {
       numeral: "三",

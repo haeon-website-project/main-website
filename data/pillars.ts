@@ -15,15 +15,15 @@ export const PILLARS: PillarItem[] = [
   },
   {
     index: "02 / 心神",
-    japaneseSmall: "ストレスによる悪影響を緩和する",
-    title: "Calms the spirit.",
-    description: 'Classified in the "Calm Spirit" category — eases anxiety, quiets the mind, softens sleep.',
+    japaneseSmall: "健康な心血管系を維持する",
+    title: "maintain a healthy cardiovascular system and circulatory health.",
+    description: 'eases anxiety, quiets the mind, softens sleep.',
   },
   {
     index: "03 / 気",
     japaneseSmall: "体のエネルギーレベルを保つ",
-    title: "Balances energy.",
-    description: "A qi tonic — harmonising vitality through the length of the day, without stimulation.",
+    title: "Maintains wellbeing, Balances energy.",
+    description: "A qi tonic — harmonizing vitality through the length of the day, without stimulation.",
   },
   {
     index: "04 / 均衡",

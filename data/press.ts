@@ -5,17 +5,17 @@ export const PRESS: PressContent = {
   heading: "As seen in the press.",
   lede: "Mikei Red Reishi has been featured across the UK's most-read titles — from Daily Mail Online and Daily Express to Daily Star, alongside endorsements from Britain's leading nutritionists.",
   feature: {
-    source: "Daily Star Online · Fashion & Beauty",
+    source: "Daily Star · Fashion & Beauty",
     heading: "Magic mushrooms: Kim Kardashian's secret to younger-looking skin.",
     quote:
       "The reality TV star has been smearing on anti-ageing Japanese red reishi mushrooms to keep her skin looking taut, smooth and glowing… From London to Vancouver, Tokyo to New York, millions of health-conscious consumers are discovering the benefits of the mushroom in the form of Red Reishi Essence.",
-    byline: "Laura Mitchell · Daily Star Online",
+    byline: "Laura Mitchell · Daily Star",
     href: "https://www.dailystar.co.uk/fashion-beauty/395039/Kim-Kardashian-beauty-secret",
     image: {
-      src: "/images/press-feature.svg",
-      alt: "Placeholder — Daily Star Online feature image",
-      width: 800,
-      height: 900,
+      src: "/images/press-feature-reishi.webp",
+      alt: "Sliced red reishi mushrooms",
+      width: 732,
+      height: 1024,
     },
   },
   cards: [
@@ -41,13 +41,6 @@ export const PRESS: PressContent = {
       quote:
         "The three most reputable adaptogens are the ginseng family, reishi mushroom — also known as lingzhi in China — and rhodiola. Of all the adaptogenic herbs that help give stress resilience and an energy boost, I like reishi and ginseng the best.",
       byline: "Patrick Holford · Nutritional Therapist & Author",
-    },
-    {
-      source: "Mikei UK Workplace Study · March 2016",
-      heading: "80% of UK workers say stress is affecting their physical and mental health.",
-      quote:
-        "30% of people obsessively worry every day about their work performance, and over 50% sometimes feel their work interferes with their personal life.",
-      byline: "Mikei / Haeon Ltd. National Survey",
     },
   ],
 };

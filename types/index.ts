@@ -81,7 +81,6 @@ export interface StoryContent {
   quote: string;
   quoteCite: string;
   body: string;
-  image: SanityImage;
   timeline: TimelineEntry[];
 }
 
@@ -91,7 +90,6 @@ export interface ProductSpec {
 }
 
 export interface ProductContent {
-  japaneseLabel: string;
   heading: string;
   description: string;
   specs: ProductSpec[];
@@ -156,13 +154,6 @@ export interface LocatorContent {
   allCountriesLabel: string;
   columns: { country: string; city: string; store: string; address: string };
   stores: StoreLocation[];
-}
-
-export interface ContactCtaContent {
-  eyebrow: string;
-  heading: string;
-  body: string;
-  cta: CtaLink;
 }
 
 export interface FooterColumn {

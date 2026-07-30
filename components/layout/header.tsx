@@ -14,7 +14,7 @@ import { useScrollDirection } from "@/hooks/use-scroll-direction";
 import { cn } from "@/lib/utils";
 import type { CtaLink } from "@/types";
 
-const HEADER_CTA: CtaLink = { label: "Shop Essence", href: "#product" };
+const HEADER_CTA: CtaLink = { label: "Buy Mikei Now", href: "#product" };
 
 export function Header() {
   const { isScrolled, isHidden } = useScrollDirection(HEADER_HIDE_THRESHOLD_PX);
@@ -33,10 +33,10 @@ export function Header() {
       <Container className="flex items-center justify-between gap-6 py-4">
         <Link href="/" className="shrink-0">
           <Image
-            src="/images/haeon-logo.png"
-            alt="Haeon"
-            width={171}
-            height={50}
+            src="/images/mikei-logo.png"
+            alt="Mikei"
+            width={287}
+            height={300}
             priority
             className="h-8 w-auto md:h-9"
           />

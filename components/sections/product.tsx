@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/shared/container";
 import { CtaButton } from "@/components/shared/cta-button";
 import { Heading } from "@/components/shared/heading";
-import { JapaneseAccent } from "@/components/shared/japanese-accent";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { Text } from "@/components/shared/text";
@@ -20,17 +19,6 @@ export function Product() {
       <Container className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal>
           <div className="relative isolate flex aspect-square items-center justify-center overflow-hidden bg-[radial-gradient(600px_400px_at_50%_40%,#f6ecd6,#e2d2b1)] p-14 md:p-16">
-            <JapaneseAccent size="corner" aria-hidden="true" className="text-accent/10 absolute top-6 left-8">
-              御芝
-            </JapaneseAccent>
-            <JapaneseAccent
-              size="corner"
-              aria-hidden="true"
-              className="text-secondary/10 absolute right-8 bottom-6"
-            >
-              霊芝
-            </JapaneseAccent>
-
             <motion.div
               className="relative z-10 aspect-[8/9] w-[70%]"
               initial={{ opacity: 0, y: 24, scale: 0.96 }}
@@ -51,9 +39,6 @@ export function Product() {
 
         <div>
           <Reveal>
-            <JapaneseAccent size="label" className="mb-3.5 block">
-              {PRODUCT.japaneseLabel}
-            </JapaneseAccent>
             <Heading as="h2" variant="section">
               {PRODUCT.heading}
             </Heading>
