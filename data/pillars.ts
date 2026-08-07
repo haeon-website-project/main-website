@@ -3,7 +3,7 @@ import type { PillarItem } from "@/types";
 export const PILLARS_HEADING = {
   japaneseLabel: "霊芝の四つの徳",
   heading: "Four virtues, one mushroom.",
-  lede: 'Reishi (Lingzhi, 霊芝) has been described in Traditional Chinese Medicine for over two millennia as the "Mushroom of Immortality" — a Superior Herb that calms spirit, tonifies qi and returns the body to equilibrium.',
+  lede: 'Reishi (Lingzhi, 霊芝) has been described in Traditional Chinese Medicine for over two millennia as the "Mushroom of Immortality," a Superior Herb that calms spirit, tonifies qi and returns the body to equilibrium.',
 };
 
 export const PILLARS: PillarItem[] = [
@@ -23,12 +23,12 @@ export const PILLARS: PillarItem[] = [
     index: "03 / 気",
     japaneseSmall: "体のエネルギーレベルを保つ",
     title: "Maintains wellbeing, Balances energy.",
-    description: "A qi tonic — harmonizing vitality through the length of the day, without stimulation.",
+    description: "A qi tonic: harmonizing vitality through the length of the day, without stimulation.",
   },
   {
     index: "04 / 均衡",
     japaneseSmall: "自然界で最も強力なアダプトゲン",
     title: "Nature's adaptogen.",
-    description: "A simple herb that guides the body — gently, patiently — back toward equilibrium.",
+    description: "A simple herb that guides the body, gently and patiently, back toward equilibrium.",
   },
 ];

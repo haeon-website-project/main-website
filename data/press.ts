@@ -3,7 +3,7 @@ import type { PressContent } from "@/types";
 export const PRESS: PressContent = {
   eyebrow: "メディア掲載",
   heading: "As seen in the press.",
-  lede: "Mikei Red Reishi has been featured across the UK's most-read titles — from Daily Mail Online and Daily Express to Daily Star, alongside endorsements from Britain's leading nutritionists.",
+  lede: "Mikei Red Reishi has been featured across the UK's most-read titles, from Daily Mail Online and Daily Express to Daily Star, alongside endorsements from Britain's leading nutritionists.",
   feature: {
     source: "Daily Star · Fashion & Beauty",
     heading: "Magic mushrooms: Kim Kardashian's secret to younger-looking skin.",
@@ -31,7 +31,7 @@ export const PRESS: PressContent = {
       source: "Mail Online · Health",
       heading: "Lisa Snowdon on how therapy, mindfulness and reishi helped her fight depression.",
       quote:
-        '"It\'s time to end the taboos around mental health." The TV star reveals the daily rituals — including Mikei Red Reishi — that anchor her wellbeing.',
+        '"It\'s time to end the taboos around mental health." The TV star reveals the daily rituals, including Mikei Red Reishi, that anchor her wellbeing.',
       byline: "Daily Mail Online · Health",
       href: "https://www.dailymail.co.uk/health/article-5320033/Lisa-Snowden-reveals-fought-depression.html",
     },
@@ -39,7 +39,7 @@ export const PRESS: PressContent = {
       source: "Patrick Holford · Nutritionist",
       heading: '"Red reishi is one of the three most reputable adaptogens."',
       quote:
-        "The three most reputable adaptogens are the ginseng family, reishi mushroom — also known as lingzhi in China — and rhodiola. Of all the adaptogenic herbs that help give stress resilience and an energy boost, I like reishi and ginseng the best.",
+        "The three most reputable adaptogens are the ginseng family, reishi mushroom (also known as lingzhi in China) and rhodiola. Of all the adaptogenic herbs that help give stress resilience and an energy boost, I like reishi and ginseng the best.",
       byline: "Patrick Holford · Nutritional Therapist & Author",
     },
   ],

@@ -4,7 +4,7 @@ export const LOCATOR: LocatorContent = {
   eyebrow: "お取扱店",
   heading: "Stockists across UK.",
   lede: "Mikei is carried by a curated network of luxury department stores, pharmacies and apothecaries. Search by city.",
-  searchPlaceholder: "Search — store, city, postcode",
+  searchPlaceholder: "Search: store, city, postcode",
   allCountriesLabel: "All countries",
   columns: { country: "Country", city: "City", store: "Retailer", address: "Address" },
   stores: [

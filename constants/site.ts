@@ -6,7 +6,7 @@ export const SITE: SiteConfig = {
   japaneseTagline: "御芝 · Since 1976",
   since: "1976",
   description:
-    "Mikei Red Reishi Essence — wood-log cultivated in Gunma, Japan since 1976 by the Mayuzumi family. Available at Harrods, Selfridges and fine European retailers.",
+    "Mikei Red Reishi Essence: wood-log cultivated in Gunma, Japan since 1976 by the Mayuzumi family. Available at Harrods, Selfridges and fine European retailers.",
   url: "https://www.mikei.co.uk",
   ogImage: "/og-image.jpg",
   locale: "en_GB",

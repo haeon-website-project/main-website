@@ -26,7 +26,7 @@ export function Story() {
           <Text as="blockquote" variant="quote" className="mt-8">
             &ldquo;{STORY.quote}&rdquo;
             <cite className="text-muted-foreground mt-3.5 block font-sans text-[11px] font-normal tracking-[0.24em] uppercase not-italic">
-              — {STORY.quoteCite}
+              – {STORY.quoteCite}
             </cite>
           </Text>
         </Reveal>
