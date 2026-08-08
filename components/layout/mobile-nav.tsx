@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 import { CtaButton } from "@/components/shared/cta-button";
+import { handleHashLinkClick } from "@/lib/hash-link";
 import type { CtaLink, NavItem } from "@/types";
 
 interface MobileNavProps {
@@ -80,7 +81,10 @@ export function MobileNav({ items, cta }: MobileNavProps) {
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        onClick={() => setOpen(false)}
+                        onClick={(event) => {
+                          setOpen(false);
+                          handleHashLinkClick(event, item.href);
+                        }}
                         className="font-display text-secondary hover:text-accent text-2xl transition-colors"
                       >
                         {item.label}

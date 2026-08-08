@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,6 +7,7 @@ import { Container } from "@/components/shared/container";
 import { JapaneseAccent } from "@/components/shared/japanese-accent";
 import { SITE } from "@/constants/site";
 import { FOOTER } from "@/data/footer";
+import { handleHashLinkClick } from "@/lib/hash-link";
 
 export function Footer() {
   return (
@@ -41,6 +44,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
+                      onClick={(event) => handleHashLinkClick(event, link.href)}
                       className="text-line hover:text-clay font-sans text-[13px] tracking-[0.02em] transition-colors"
                     >
                       {link.label}

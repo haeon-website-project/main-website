@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { handleHashLinkClick } from "@/lib/hash-link";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types";
 
@@ -30,6 +31,7 @@ export function DesktopNav({ items, className }: DesktopNavProps) {
             >
               <Link
                 href={item.href}
+                onClick={(event) => handleHashLinkClick(event, item.href)}
                 className="text-secondary hover:text-accent block font-sans text-[11px] tracking-[0.24em] whitespace-nowrap uppercase transition-colors"
                 aria-haspopup={hasChildren ? "true" : undefined}
                 aria-expanded={hasChildren ? openLabel === item.label : undefined}
@@ -52,6 +54,7 @@ export function DesktopNav({ items, className }: DesktopNavProps) {
                           <li key={child.label}>
                             <Link
                               href={child.href}
+                              onClick={(event) => handleHashLinkClick(event, child.href)}
                               className="text-secondary hover:bg-muted hover:text-accent block px-4 py-2.5 font-sans text-[13px] tracking-[0.04em] transition-colors"
                             >
                               {child.label}
