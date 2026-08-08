@@ -139,11 +139,10 @@ export interface PressContent {
 }
 
 export interface StoreLocation {
-  countryCode: string;
-  country: string;
-  city: string;
   name: string;
   address: string;
+  mapUrl?: string;
+  mapLabel?: string;
 }
 
 export interface LocatorContent {
@@ -151,8 +150,8 @@ export interface LocatorContent {
   heading: string;
   lede: string;
   searchPlaceholder: string;
-  allCountriesLabel: string;
-  columns: { country: string; city: string; store: string; address: string };
+  columns: { srNo: string; store: string; address: string; map: string };
+  mapLinkLabel: string;
   stores: StoreLocation[];
 }
 

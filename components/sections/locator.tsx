@@ -8,30 +8,18 @@ import { Section } from "@/components/shared/section";
 import { SectionHeader } from "@/components/shared/section-header";
 import { LOCATOR } from "@/data/locator";
 
-const SHOW_STOCKIST_LIST = false;
+const SHOW_STOCKIST_LIST = true;
 
 export function Locator() {
   const [query, setQuery] = useState("");
-  const [country, setCountry] = useState("");
-
-  const countries = useMemo(() => {
-    const seen = new Map<string, string>();
-    for (const store of LOCATOR.stores) seen.set(store.countryCode, store.country);
-    return Array.from(seen.entries()).sort((a, b) => a[1].localeCompare(b[1]));
-  }, []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return LOCATOR.stores.filter((store) => {
-      const matchesCountry = !country || store.countryCode === country;
-      const matchesQuery =
-        !q ||
-        store.name.toLowerCase().includes(q) ||
-        store.city.toLowerCase().includes(q) ||
-        store.address.toLowerCase().includes(q);
-      return matchesCountry && matchesQuery;
-    });
-  }, [query, country]);
+    if (!q) return LOCATOR.stores;
+    return LOCATOR.stores.filter(
+      (store) => store.name.toLowerCase().includes(q) || store.address.toLowerCase().includes(q),
+    );
+  }, [query]);
 
   return (
     <Section tone="paper" id="locator">
@@ -58,23 +46,6 @@ export function Locator() {
                   className="border-border text-secondary focus:border-accent w-full border bg-transparent py-3.5 pr-4 pl-10 font-sans text-[13px] tracking-[0.04em] focus:outline-none"
                 />
               </div>
-
-              <label htmlFor="locator-country" className="sr-only">
-                Filter by country
-              </label>
-              <select
-                id="locator-country"
-                value={country}
-                onChange={(event) => setCountry(event.target.value)}
-                className="border-border text-secondary focus:border-accent min-w-[200px] border bg-transparent px-4 py-3.5 font-sans text-[13px] tracking-[0.04em] focus:outline-none"
-              >
-                <option value="">{LOCATOR.allCountriesLabel}</option>
-                {countries.map(([code, name]) => (
-                  <option key={code} value={code}>
-                    {name}
-                  </option>
-                ))}
-              </select>
             </div>
 
             <div className="border-border overflow-x-auto border">
@@ -82,10 +53,10 @@ export function Locator() {
                 <thead>
                   <tr>
                     {[
-                      LOCATOR.columns.country,
-                      LOCATOR.columns.city,
+                      LOCATOR.columns.srNo,
                       LOCATOR.columns.store,
                       LOCATOR.columns.address,
+                      LOCATOR.columns.map,
                     ].map((heading) => (
                       <th
                         key={heading}
@@ -108,19 +79,30 @@ export function Locator() {
                       </td>
                     </tr>
                   ) : (
-                    filtered.map((store) => (
-                      <tr key={`${store.name}-${store.city}`} className="hover:bg-muted transition-colors">
+                    filtered.map((store, index) => (
+                      <tr key={store.name} className="hover:bg-muted transition-colors">
                         <td className="border-border text-accent border-b px-4 py-4 font-sans text-sm font-medium tracking-[0.04em]">
-                          {store.country}
-                        </td>
-                        <td className="border-border text-secondary border-b px-4 py-4 font-sans text-sm">
-                          {store.city}
+                          {index + 1}
                         </td>
                         <td className="border-border font-display text-secondary border-b px-4 py-4 text-lg">
                           {store.name}
                         </td>
                         <td className="border-border text-foreground/75 border-b px-4 py-4 font-sans text-sm">
                           {store.address}
+                        </td>
+                        <td className="border-border border-b px-4 py-4 font-sans text-sm">
+                          {store.mapUrl ? (
+                            <a
+                              href={store.mapUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-accent underline-offset-2 hover:underline"
+                            >
+                              {store.mapLabel ?? LOCATOR.mapLinkLabel}
+                            </a>
+                          ) : (
+                            <span className="text-muted-foreground">{"—"}</span>
+                          )}
                         </td>
                       </tr>
                     ))
